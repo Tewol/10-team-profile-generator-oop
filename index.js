@@ -143,6 +143,14 @@ const addEmployee = () => {
   })
 }
 
+
+
+// Displays a view of all employees
+// Your global store has an inventory of all products.
+//const viewAllEmployees = () => {
+  //console.log(team.inventory[0]);
+//}
+
 // Function to initialize app
 const init = () => {
   inquirer.prompt([
