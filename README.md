@@ -4,7 +4,6 @@
     This is a command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. 
 
 
-#
 # Functionality
 
 * A nicely formated HTML file is generated that displays  team roster based on user inputs of team memebers and their informatoin. 
@@ -34,14 +33,11 @@
 	* school, and takes you back to the menu
 * HTML is generated after finishing building the team and exit application. 
 
-#
 # Mock-up
 The following Video demonstrates the application appearance and functionality:
 
 ![An HTML webpage that displays summaries of each employees.](./images/team.png)
 
-
-#
 # Links to the deployed application
 * The URL of the functional, deployed application. https://tewol.github.io/10-team-profile-generator-oop/
 
