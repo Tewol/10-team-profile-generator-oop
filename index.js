@@ -51,7 +51,7 @@ const addManager = () => {
       </ul>
     </div>`;
 
-    fs.appendFile("./dist/index.html", data, function (err) {
+    fs.appendFile("./output/index.html", data, function (err) {
       if (err) {
           return reject(err);
       };
@@ -103,7 +103,7 @@ const addEngineer =() => {
       </ul>
     </div>`;
 
-    fs.appendFile("./dist/index.html", data, function (err) {
+    fs.appendFile("./output/index.html", data, function (err) {
       if (err) {
           return reject(err);
       };
@@ -155,7 +155,7 @@ const addIntern =() => {
       </ul>
     </div>`
     
-    fs.appendFile("./dist/index.html", data, function (err) {
+    fs.appendFile("./output/index.html", data, function (err) {
       if (err) {
         return reject(err);
       };
@@ -182,6 +182,7 @@ const addEmployee = () => {
         addIntern();
         break;
       default:
+        htmlFooter()
         break;
     }
   })
@@ -212,6 +213,7 @@ const init = () => {
         addIntern();
         break;
       default:
+        htmlFooter()
         break;
     }
   })
@@ -237,7 +239,7 @@ function htmlHeader(){
 
   <body>
     <div class="row card-deck">`;
-      fs.writeFile("./dist/index.html", header, function(err){
+      fs.writeFile("./output/index.html", header, function(err){
         if (err) {
           console.log(err);
         }
@@ -252,7 +254,7 @@ function htmlFooter(){
 </body>
 
 </html>`;
-  fs.appendFile("./dist/index.html", footer, function (err) {
+  fs.appendFile("./output/index.html", footer, function (err) {
     if (err) {
       return reject(err);
     };
