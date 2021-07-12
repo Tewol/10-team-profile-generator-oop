@@ -39,14 +39,15 @@ const addManager = () => {
     // instantiate a new Manager
     //const addedManager = new Manager(name, id, email, officenumber)
 
-    data = `  <div class="card">
+    data = `  
+    <div class="card">
       <div class="card-header">
         <h3 class="name"> ${name}</h3>
         <h3 class="titile" ><i class="fas fa-female"> </i> Manager </h3>
       </div>
       <ul class="list-group list-group-flush">
         <li class="id"> ID: ${id} </li>
-        <li class="email"> Email: ${email}</li>
+        <li class="email"> Email: <a href="mailto:${email}"> ${email} </a> </li>
         <li class="officeNumber"> Office Num.: ${officenumber}</li>
       </ul>
     </div>`;
@@ -91,15 +92,16 @@ const addEngineer =() => {
     // go to menu to add engineer, intern or exit
     addEmployee();
 
-    data = `  <div class="card">
+    data = `  
+    <div class="card">
       <div class="card-header">
         <h3 class="name"> ${name} </h3>
         <h3 class="titile"> <i class="fas fa-terminal"> </i> Engeener </h3>
       </div>
       <ul class="list-group list-group-flush">
         <li class="id"> ID: ${id}</li>
-        <li class="email"> Email: ${email}</li>
-        <li class="gitHub"> GitHub: ${githubuser}</li>
+        <li class="email"> Email: <a href="mailto:${email}"> ${email} </a> </li>
+        <li class="gitHub"> GitHub: <a href="https://github.com/${githubuser} "> ${githubuser} </a> </li>
       </ul>
     </div>`;
 
@@ -143,14 +145,15 @@ const addIntern =() => {
     // go to menu to add engineer, intern or exit
     addEmployee();
   
-    data = `<div class="card">
+    data = `
+    <div class="card">
       <div class="card-header">
         <h3 class="name"> ${name} </h3>
         <h3 class="titile"> <i class="fas fa-user-graduate"> </i> Intern </h3>
       </div>
       <ul class="list-group list-group-flush">
         <li class="id"> ID: ${id} </li>
-        <li class="email"> Email: ${email}</li>
+        <li class="email"> Email: <a href="mailto:${email}"> ${email} </a> </li>
         <li class="school"> School: ${school}</li>
       </ul>
     </div>`
@@ -248,7 +251,9 @@ function htmlHeader(){
 
 
 function htmlFooter(){
-  const footer = `  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  const footer = `  
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
   <script src="./index.js"></script>
 </body>
