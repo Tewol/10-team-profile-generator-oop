@@ -37,15 +37,17 @@ The following Video demonstrates the application appearance and functionality:
 
 ![Demo!](./images/demo.gif)
 
+![An HTML webpage that displays summaries of each employees.](./images/team.png)
+
 # Testing Result
 
-![An HTML webpage that displays summaries of each employees.](./images/test.png)
+![Test Result.](./images/test.png)
 
 # Links to the deployed application
 * A walkthrough video that demonstrates the functionality:
-https://tewol.github.io/10-team-profile-generator-oop/
+https://github.com/Tewol/10-team-profile-generator-oop/blob/main/images/demo.gif
 
-* Sample HTML file generated using your applicatio: https://tewol.github.io/10-team-profile-generator-oop/
+* Sample HTML file generated using your applicatio: https://tewol.github.io/10-team-profile-generator-oop/output/
 
 * A URL of the GitHub repository: https://github.com/Tewol/10-team-profile-generator-oop
 

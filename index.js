@@ -236,7 +236,7 @@ function htmlHeader() {
 </head>
 
 <header class="jumbotron">
-  <h1 class="display-3"> Team Awsome</h1>
+  <h1 class="display-3"> Team Awesome</h1>
 </header>
 
 <body>
