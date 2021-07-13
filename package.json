@@ -1,0 +1,30 @@
+{
+  "name": "10-team-profile-generator-oop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "dependencies": {
+    "inquirer": "^8.1.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tewol/10-team-profile-generator-oop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tewol/10-team-profile-generator-oop/issues"
+  },
+  "homepage": "https://github.com/Tewol/10-team-profile-generator-oop#readme"
+}

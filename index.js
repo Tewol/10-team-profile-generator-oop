@@ -31,7 +31,7 @@ const addManager = () => {
       message: "What is the team Manager's office number?"
     }
 
-  ]).then( ({name, id, email, officenumber}) => {
+  ]).then(({ name, id, email, officenumber }) => {
 
     // go to menu to add engineer or intern or finish adding employee. 
     addEmployee();
@@ -54,15 +54,15 @@ const addManager = () => {
 
     fs.appendFile("./output/index.html", data, function (err) {
       if (err) {
-          return reject(err);
+        return reject(err);
       };
-  });
-   
+    });
+
   });
 }
 
 // Creates an array of questions for user input
-const addEngineer =() => {
+const addEngineer = () => {
   inquirer.prompt([
     {
       type: "input",
@@ -85,10 +85,10 @@ const addEngineer =() => {
       message: "What is the Engineer's gitHub user name?"
     }
 
-  ]).then( ({name, id, email, githubuser}) => {
+  ]).then(({ name, id, email, githubuser }) => {
     // instantiate a new Engineer
     //const addedEngineer = new Engineer(name, id, email, githubuser)
-    
+
     // go to menu to add engineer, intern or exit
     addEmployee();
 
@@ -107,15 +107,15 @@ const addEngineer =() => {
 
     fs.appendFile("./output/index.html", data, function (err) {
       if (err) {
-          return reject(err);
+        return reject(err);
       };
     });
-    
+
   });
 }
 
 // Creates an array of questions for user input
-const addIntern =() => {
+const addIntern = () => {
   inquirer.prompt([
     {
       type: "input",
@@ -138,13 +138,13 @@ const addIntern =() => {
       message: "What is the school name of the Intern?"
     }
 
-  ]).then( ({name, id, email, school}) => {
+  ]).then(({ name, id, email, school }) => {
     // instantiate a new Intern
     //const addedIntern = new Intern(name, id, email, school)
 
     // go to menu to add engineer, intern or exit
     addEmployee();
-  
+
     data = `
     <div class="card">
       <div class="card-header">
@@ -157,13 +157,12 @@ const addIntern =() => {
         <li class="school"> School: ${school}</li>
       </ul>
     </div>`
-    
+
     fs.appendFile("./output/index.html", data, function (err) {
       if (err) {
         return reject(err);
       };
-    }); 
-
+    });
   });
 }
 
@@ -176,8 +175,8 @@ const addEmployee = () => {
       choices: ["engineer", "intern", "finish building my team"],
       name: "teammember"
     }
-  ]).then( ({teammember}) => {
-    switch(teammember){
+  ]).then(({ teammember }) => {
+    switch (teammember) {
       case "engineer":
         addEngineer();
         break;
@@ -196,16 +195,16 @@ const addEmployee = () => {
 const init = () => {
   //htmlHeader function call.
   htmlHeader();
-  
+
   inquirer.prompt([
     {
       type: "list",
       message: "Choose an option:",
-      choices: [ "Add Manager", "Add Engineer", "Add Intern"],
+      choices: ["Add Manager", "Add Engineer", "Add Intern"],
       name: "employeeType"
     }
-  ]).then( resp => {
-    switch( resp.employeeType ){
+  ]).then(resp => {
+    switch (resp.employeeType) {
       case "Add Manager":
         addManager();
         break;
@@ -223,34 +222,33 @@ const init = () => {
 }
 
 //This function writes begins the output page. 
-function htmlHeader(){
+function htmlHeader() {
   const header = `<!DocType html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css" />
-    <title> My Team Profile Generator </title>
-  </head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css" />
+  <title> My Team Profile Generator </title>
+</head>
 
-  <header class="jumbotron">
-    <h1 class="display-3"> Team Awsome</h1>
-  </header>
+<header class="jumbotron">
+  <h1 class="display-3"> Team Awsome</h1>
+</header>
 
-  <body>
-    <div class="row card-deck">`;
-      fs.writeFile("./output/index.html", header, function(err){
-        if (err) {
-          console.log(err);
-        }
-      });
+<body>
+  <div class="row card-deck">`;
+  fs.writeFile("./output/index.html", header, function (err) {
+    if (err) {
+      console.log(err);
+    }
+  });
 }
 
-
-function htmlFooter(){
+function htmlFooter() {
   const footer = `  
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -263,9 +261,8 @@ function htmlFooter(){
     if (err) {
       return reject(err);
     };
-  }); 
+  });
 }
-
 
 // Function call to initialize app
 init();
