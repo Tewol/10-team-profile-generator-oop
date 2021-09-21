@@ -31,6 +31,11 @@
 	- school, and takes you back to the menu
 * HTML is generated after finishing building the team and exit application. 
 
+# Technologies Used
+* node.js
+* Inquirer.js
+* Jest
+
 # Mock-up
 The following Video demonstrates the application appearance and functionality:
 
